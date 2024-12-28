@@ -208,7 +208,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 
 /*!
    * Bootstrap  v5.3.0 (https://getbootstrap.com/)
-   * Copyright 2011-2023 The Bootstrap Authors
+   * Copyright 2011-2024 The Bootstrap Authors
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    */
 
@@ -32347,21 +32347,21 @@ pre code.hljs {
   padding: 10px 50px 0;
 }
 
-.profile-interest .row {
+.profile-intpregAthIt .row {
   margin: 0 -0.7px;
 }
 
-.profile-interest .row .int-col {
+.profile-intpregAthIt .row .int-col {
   padding: 0 0.7px;
 }
 
-.profile-interest .row .int-col .interest-cat {
+.profile-intpregAthIt .row .int-col .intpregAthIt-cat {
   margin-bottom: 1.4px;
   position: relative;
   display: block;
 }
 
-.profile-interest .row .int-col .interest-cat:after {
+.profile-intpregAthIt .row .int-col .intpregAthIt-cat:after {
   background: #000;
   bottom: 0;
   content: "";
@@ -32373,7 +32373,7 @@ pre code.hljs {
   z-index: 0;
 }
 
-.profile-interest .row .int-col .interest-cat p {
+.profile-intpregAthIt .row .int-col .intpregAthIt-cat p {
   position: absolute;
   top: 0;
   width: 100%;
@@ -37593,15 +37593,15 @@ fieldset:disabled .btn {
   border-color: #992180;
 }
 
-.btn-pinterest {
+.btn-pintpregAthIt {
   background: #bd081c;
   border-color: #bd081c;
   color: #fff;
 }
 
-.btn-pinterest:active,
-.btn-pinterest:focus,
-.btn-pinterest:hover {
+.btn-pintpregAthIt:active,
+.btn-pintpregAthIt:focus,
+.btn-pintpregAthIt:hover {
   background: #8c0615;
   color: #fff;
   border-color: #8c0615;

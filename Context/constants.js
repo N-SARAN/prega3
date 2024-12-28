@@ -12,15 +12,15 @@ const openai = new OpenAI({
 });
 
 const HEALTH_CARE_ABI = Healthcare.abi;
-const HEALTH_CARE_ADDRESS = "0xf37114fb905EDc9dEF492Bf0C6d396548A6fF2c6";
+const HEALTH_CARE_ADDRESS = process.env.NEXT_PUBLIC_HEALTH_CARE;
 
 //ADMIN
 const ADMIN_ADDRESS = process.env.NEXT_PUBLIC_ADMIN_ADDRESS;
 const NETWORK = process.env.NEXT_PUBLIC_NETWORK;
 
 //PINATE API - SECRECT KEYS
-const PINATA_AIP_KEY = "6913532cb8a350b6dbb3";
-const PINATA_SECRECT_KEY = "0c93e6871fd49b760c5aa1461e5fb4c86e6bd3e6bdf61c3220efdc0aee4020b4";
+const PINATA_AIP_KEY = process.env.NEXT_PUBLIC_PINATA_AIP_KEY;
+const PINATA_SECRECT_KEY = process.env.NEXT_PUBLIC_PINATA_SECRECT_KEY;
 
 //NETWORK
 const networks = {
@@ -34,72 +34,6 @@ const networks = {
     },
     rpcUrls: ["https://rpc.ankr.com/eth_holesky"],
     blockExplorerUrls: ["https://holesky.etherscan.io/"],
-  },
-  sepolia: {
-    chainId: `0x${Number(11155111).toString(16)}`,
-    chainName: "Sepolia",
-    nativeCurrency: {
-      name: "SepoliaETH",
-      symbol: "SepoliaETH",
-      decimals: 18,
-    },
-    rpcUrls: ["https://sepolia.infura.io/v3/"],
-    blockExplorerUrls: ["https://sepolia.etherscan.io"],
-  },
-  polygon_amoy: {
-    chainId: `0x${Number(80002).toString(16)}`,
-    chainName: "Polygon Amoy",
-    nativeCurrency: {
-      name: "MATIC",
-      symbol: "MATIC",
-      decimals: 18,
-    },
-    rpcUrls: ["https://rpc.ankr.com/polygon_amoy"],
-    blockExplorerUrls: ["https://www.oklink.com/amoy"],
-  },
-  polygon: {
-    chainId: `0x${Number(137).toString(16)}`,
-    chainName: "Polygon Mainnet",
-    nativeCurrency: {
-      name: "MATIC",
-      symbol: "MATIC",
-      decimals: 18,
-    },
-    rpcUrls: ["https://rpc.ankr.com/polygon"],
-    blockExplorerUrls: ["https://polygonscan.com/"],
-  },
-  bsc: {
-    chainId: `0x${Number(56).toString(16)}`,
-    chainName: "Binance Smart Chain Mainnet",
-    nativeCurrency: {
-      name: "Binance Chain Native Token",
-      symbol: "BNB",
-      decimals: 18,
-    },
-    rpcUrls: ["https://rpc.ankr.com/bsc"],
-    blockExplorerUrls: ["https://bscscan.com"],
-  },
-  base_mainnet: {
-    chainId: `0x${Number(8453).toString(16)}`,
-    chainName: "Base Mainnet",
-    nativeCurrency: {
-      name: "ETH",
-      symbol: "ETH",
-      decimals: 18,
-    },
-    rpcUrls: ["https://mainnet.base.org/"],
-    blockExplorerUrls: ["https://bscscan.com"],
-  },
-  base_sepolia: {
-    chainId: `0x${Number(84532).toString(16)}`,
-    chainName: "Base Sepolia",
-    nativeCurrency: {
-      name: "ETH",
-      symbol: "ETH",
-      decimals: 18,
-    },
-    rpcUrls: ["https://sepolia.base.org"],
-    blockExplorerUrls: ["https://bscscan.com"],
   },
   localhost: {
     chainId: `0x${Number(31337).toString(16)}`,

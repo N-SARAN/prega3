@@ -58,7 +58,7 @@ const AI = () => {
             <a href="javascript:void(0)">ASK </a>
           </li>
           <li className="breadcrumb-item active">
-            <a href="javascript:void(0)">ERES AI</a>
+            <a href="javascript:void(0)">pregAthI AI</a>
           </li>
         </ol>
       </div>

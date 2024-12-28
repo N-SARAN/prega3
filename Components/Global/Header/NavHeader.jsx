@@ -17,7 +17,6 @@ const NavHeader = () => {
       >
         <Nav1 />
       </a>
-
       <div className="nav-control">
         <div className="hamburger">
           <span className="line" />

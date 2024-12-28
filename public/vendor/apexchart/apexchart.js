@@ -183,7 +183,7 @@
     }
 
     function _slicedToArray(arr, i) {
-        return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
+        return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterablpregAthIt();
     }
 
     function _toConsumableArray(arr) {
@@ -253,7 +253,7 @@
         throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
     }
 
-    function _nonIterableRest() {
+    function _nonIterablpregAthIt() {
         throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
     }
 
@@ -401,28 +401,28 @@
             key: "clone",
             value: function clone(source) {
                 if (Utils.is('Array', source)) {
-                    var cloneResult = [];
+                    var clonpregAthIult = [];
 
                     for (var i = 0; i < source.length; i++) {
-                        cloneResult[i] = this.clone(source[i]);
+                        clonpregAthIult[i] = this.clone(source[i]);
                     }
 
-                    return cloneResult;
+                    return clonpregAthIult;
                 } else if (Utils.is('Null', source)) {
                     // fixes an issue where null values were converted to {}
                     return null;
                 } else if (Utils.is('Date', source)) {
                     return source;
                 } else if (_typeof(source) === 'object') {
-                    var _cloneResult = {};
+                    var _clonpregAthIult = {};
 
                     for (var prop in source) {
                         if (source.hasOwnProperty(prop)) {
-                            _cloneResult[prop] = this.clone(source[prop]);
+                            _clonpregAthIult[prop] = this.clone(source[prop]);
                         }
                     }
 
-                    return _cloneResult;
+                    return _clonpregAthIult;
                 } else {
                     return source;
                 }
@@ -3468,7 +3468,7 @@
                             dataPointMouseEnter: undefined,
                             dataPointMouseLeave: undefined,
                             beforeZoom: undefined,
-                            beforeResetZoom: undefined,
+                            beforpregAthIetZoom: undefined,
                             zoomed: undefined,
                             scrolled: undefined,
                             brushScrolled: undefined
@@ -12496,7 +12496,7 @@
                 }).reverse();
                 var config = new Config({});
 
-                var iterateResponsiveOptions = function iterateResponsiveOptions() {
+                var iteratpregAthIponsiveOptions = function iteratpregAthIponsiveOptions() {
                     var newOptions = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
                     var largestBreakpoint = res[0].breakpoint;
                     var width = window.innerWidth > 0 ? window.innerWidth : screen.width;
@@ -12506,14 +12506,14 @@
                         newOptions = Utils$1.extend(options, newOptions);
                         newOptions = Utils$1.extend(w.config, newOptions);
 
-                        _this.overrideResponsiveOptions(newOptions);
+                        _this.overridpregAthIponsiveOptions(newOptions);
                     } else {
                         for (var i = 0; i < res.length; i++) {
                             if (width < res[i].breakpoint) {
                                 newOptions = CoreUtils.extendArrayProps(config, res[i].options, w);
                                 newOptions = Utils$1.extend(w.config, newOptions);
 
-                                _this.overrideResponsiveOptions(newOptions);
+                                _this.overridpregAthIponsiveOptions(newOptions);
                             }
                         }
                     }
@@ -12523,14 +12523,14 @@
                     var options = CoreUtils.extendArrayProps(config, opts, w);
                     options = Utils$1.extend(w.config, options);
                     options = Utils$1.extend(options, opts);
-                    iterateResponsiveOptions(options);
+                    iteratpregAthIponsiveOptions(options);
                 } else {
-                    iterateResponsiveOptions({});
+                    iteratpregAthIponsiveOptions({});
                 }
             }
         }, {
-            key: "overrideResponsiveOptions",
-            value: function overrideResponsiveOptions(newOptions) {
+            key: "overridpregAthIponsiveOptions",
+            value: function overridpregAthIponsiveOptions(newOptions) {
                 var newConfig = new Config(newOptions).init({
                     responsiveOverride: true
                 });
@@ -14818,11 +14818,11 @@
                     w.globals.lastXAxis.max = undefined;
                     ch.updateHelpers.revertDefaultAxisMinMax();
 
-                    if (typeof w.config.chart.events.beforeResetZoom === 'function') {
+                    if (typeof w.config.chart.events.beforpregAthIetZoom === 'function') {
                         // here, user get an option to control xaxis and yaxis when resetZoom is called
-                        // at this point, whatever is returned from w.config.chart.events.beforeResetZoom
+                        // at this point, whatever is returned from w.config.chart.events.beforpregAthIetZoom
                         // is set as the new xaxis/yaxis min/max
-                        var resetZoomRange = w.config.chart.events.beforeResetZoom(ch, w);
+                        var resetZoomRange = w.config.chart.events.beforpregAthIetZoom(ch, w);
 
                         if (resetZoomRange) {
                             ch.updateHelpers.revertDefaultAxisMinMax(resetZoomRange);
@@ -32443,7 +32443,7 @@
         ros.set(fn, ro);
     }
 
-    function removeResizeListener(el, fn) {
+    function removpregAthIizeListener(el, fn) {
         var ro = ros.get(fn);
 
         if (ro) {
@@ -32784,7 +32784,7 @@
             key: "destroy",
             value: function destroy() {
                 window.removeEventListener('resize', this.windowResizeHandler);
-                removeResizeListener(this.el.parentNode, this.parentResizeHandler); // remove the chart's instance from the global Apex._chartInstances
+                removpregAthIizeListener(this.el.parentNode, this.parentResizeHandler); // remove the chart's instance from the global Apex._chartInstances
 
                 var chartID = this.w.config.chart.id;
 
