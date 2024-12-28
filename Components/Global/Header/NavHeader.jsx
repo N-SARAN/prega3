@@ -6,15 +6,7 @@ import { Nav1, Nav2 } from "../../SVG/index";
 const NavHeader = () => {
   return (
     <div className="nav-header">
-      <a
-        href="/"
-        className="brand-logo"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+      <a href="/" className="brand-logo">
         <Nav1 />
       </a>
       <div className="nav-control">

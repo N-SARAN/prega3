@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { useUser } from "@auth0/nextjs-auth0/client";
+import { useSession, signOut } from "next-auth/react"; // Import signOut from next-auth/react
 
-//INTERNAL IMPRORT
+// INTERNAL IMPORT
 import {
   Header,
   NavHeader,
@@ -53,8 +55,7 @@ import {
 
 import { useStateContext } from "../Context/index";
 
-
-const HomePage = () =>  {
+const HomePage = () => {
   const {
     address,
     setAddress,
@@ -69,6 +70,8 @@ const HomePage = () =>  {
     accountBalance,
     currency,
   } = useStateContext();
+
+  const { data: session, status } = useSession(); // Add this line to destructure session and status
 
   const [user, setUser] = useState();
   const [registerDoctors, setRegisterDoctors] = useState();
@@ -103,9 +106,7 @@ const HomePage = () =>  {
               let NOTIFICATION = 0;
               const ALL_NOTIFICATION = localStorage.getItem("ALL_NOTIFICATION");
               if (ALL_NOTIFICATION) {
-                NOTIFICATION = JSON.parse(
-                  localStorage.getItem("ALL_NOTIFICATION")
-                );
+                NOTIFICATION = JSON.parse(ALL_NOTIFICATION);
                 setNotificationCount(reversedArray?.length - NOTIFICATION);
               } else {
                 setNotificationCount(reversedArray?.length);
@@ -113,7 +114,7 @@ const HomePage = () =>  {
             }
           });
 
-          //CALLING DATA
+          // CALLING DATA
 
           GET_ALL_APPROVE_DOCTORS().then((doctors) => {
             setRegisterDoctors(doctors);
@@ -125,7 +126,7 @@ const HomePage = () =>  {
 
           const checkUserType = await GET_USERNAME_TYPE(address);
 
-          if (checkUserType?.userType == "Doctor") {
+          if (checkUserType?.userType === "Doctor") {
             setOpenComponent("DoctorProfile");
             setUserType("Doctor");
             const doctor = await CHECK_DOCTOR_REGISTERATION(address);
@@ -141,7 +142,7 @@ const HomePage = () =>  {
       } catch (error) {
         const ErrorMsg = PARSED_ERROR_MSG(error);
         console.log(ErrorMsg);
-        if (ErrorMsg == "User is not registered") {
+        if (ErrorMsg === "User is not registered") {
           setAuthComponent(true);
         }
         notifyError(ErrorMsg);
@@ -160,7 +161,7 @@ const HomePage = () =>  {
         setAddress(accounts[0]);
         notifySuccess("Connected successfully");
       } catch (error) {
-        notifyError("Error connecting to MetaMask:");
+        notifyError("Error connecting to MetaMask");
       }
     } else {
       notifyError("MetaMask is not installed.");
@@ -193,153 +194,191 @@ const HomePage = () =>  {
           userType={userType}
           address={address}
         />
-        <div class="content-body">
-          {openComponent == "Home" ? (
-            <Home
-              setPatientDetails={setPatientDetails}
-              setOpenComponent={setOpenComponent}
-              registerDoctors={registerDoctors}
-              registeredPatient={registeredPatient}
-              notifications={notifications}
-              setDoctorDetails={setDoctorDetails}
-              allAppointments={allAppointments}
-              accountBalance={accountBalance}
-              currency={currency}
-            />
-          ) : openComponent == "Patient" ? (
-            <Patient
-              setPatientDetails={setPatientDetails}
-              setOpenComponent={setOpenComponent}
-            />
-          ) : openComponent == "Doctor" ? (
-            <Doctor
-              setOpenComponent={setOpenComponent}
-              setDoctorDetails={setDoctorDetails}
-            />
-          ) : openComponent == "Add Medicine" ? (
-            <AddMedicine
-              setOpenComponent={setOpenComponent}
-              setMedicineDetails={setMedicineDetails}
-              registerDoctors={registerDoctors}
-            />
-          ) : openComponent == "All Appoinments" ? (
-            <AllAppoinments
-              setDoctorDetails={setDoctorDetails}
-              setOpenComponent={setOpenComponent}
-              setPatientDetails={setPatientDetails}
-            />
-          ) : openComponent == "Appointment" ? (
-            <Appointment
-              setOpenComponent={setOpenComponent}
-              setDoctorDetails={setDoctorDetails}
-            />
-          ) : openComponent == "Shop" ? (
-            <Shop
-              setOpenComponent={setOpenComponent}
-              setMedicineDetails={setMedicineDetails}
-              currency={currency}
-            />
-          ) : openComponent == "Medicine" ? (
-            <Medicine
-              setOpenComponent={setOpenComponent}
-              setMedicineDetails={setMedicineDetails}
-              medicineDetails={medicineDetails}
-              BUY_MEDICINE={BUY_MEDICINE}
-              userType={userType}
-              currency={currency}
-            />
-          ) : openComponent == "Order" ? (
-            <Order
-              setOpenComponent={setOpenComponent}
-              setMedicineDetails={setMedicineDetails}
-              setInvoic={setInvoic}
-              currency={currency}
-            />
-          ) : openComponent == "Invoice" ? (
-            <Invoice
-              setOpenComponent={setOpenComponent}
-              invoic={invoic}
-              currency={currency}
-            />
-          ) : openComponent == "Notifications" ? (
-            <Notifications
-              notifications={notifications}
-              setOpenComponent={setOpenComponent}
-            />
-          ) : openComponent == "Profile" ? (
-            <Profile
-              user={user}
-              setOpenComponent={setOpenComponent}
-              setDoctorDetails={setDoctorDetails}
-            />
-          ) : openComponent == "PatientProfile" ? (
-            <PatientProfile
-              patientDetails={patientDetails}
-              setOpenComponent={setOpenComponent}
-              setDoctorDetails={setDoctorDetails}
-            />
-          ) : openComponent == "DoctorProfile" ? (
-            <DoctorProfile
-              setPatientDetails={setPatientDetails}
-              setOpenComponent={setOpenComponent}
-              user={user}
-            />
-          ) : openComponent == "DoctorDetails" ? (
-            <DoctorDetails
-              setPatientDetails={setPatientDetails}
-              setOpenComponent={setOpenComponent}
-              doctorDetails={doctorDetails}
-            />
-          ) : openComponent == "StaffProfile" ? (
-            <StaffProfile setOpenComponent={setOpenComponent} />
-          ) : openComponent == "Chat" ? (
-            <Chat
-              setOpenComponent={setOpenComponent}
-              SEND_MESSAGE={SEND_MESSAGE}
-            />
-          ) : openComponent == "Ask AI" ? (
-            <AI setOpenComponent={setOpenComponent} />
-          ) : openComponent == "MedicialHistory" ? (
-            <MedicialHistory setOpenComponent={setOpenComponent} />
-          ) : openComponent == "User" ? (
-            <User setOpenComponent={setOpenComponent} />
-          ) : openComponent == "UpdateAdmin" ? (
-            <UpdateAdmin setOpenComponent={setOpenComponent} />
-          ) : openComponent == "YourAppointments" ? (
-            <DoctorAppointment
-              setOpenComponent={setOpenComponent}
-              setPatientDetails={setPatientDetails}
-            />
-          ) : openComponent == "Prescription" ? (
-            <Prescription
-              setOpenComponent={setOpenComponent}
-              setDoctorDetails={setDoctorDetails}
-              setPatientDetails={setPatientDetails}
-              setMedicineDetails={setMedicineDetails}
-            />
-          ) : (
-            ""
-          )}
-        </div>
-      </div>
-      {authComponent && (
-        <Auth
-          setAddDocotr={setAddDocotr}
-          setAddPatient={setAddPatient}
-          address={address}
-          connectMetaMask={connectMetaMask}
-          SHORTEN_ADDRESS={SHORTEN_ADDRESS}
-        />
-      )}
+        <div className="content-body">
+        {status === "authenticated" ? (
+  <div style={{ textAlign: "center", marginTop: "20px" }}>
+    <h2>Welcome, {session.user.name}!</h2>
+    <button
+      onClick={() => signOut()}
+      style={{
+        padding: "10px 20px",
+        marginTop: "20px",
+        cursor: "pointer",
+        border: "none",
+        backgroundColor: "#007bff",
+        color: "#fff",
+        borderRadius: "5px",
+        display: "inline-block",
+      }}
+    >
+      Log Out
+    </button>
+  </div>
+) : (
+  <div style={{ textAlign: "center", marginBottom: "-100px" ,marginLeft:"1000px "}}>
+    <a
+      href="/login"
+      style={{
+        color: "blue",
+        fontSize: "18px",
+        textDecoration: "none",
+        display: "inline-block",
+        margin: "0 auto", // Centers horizontally
+      }}
+    >
+      Login Here
+    </a>
+  </div>
+)}
 
-      {addDocotr && <AddDoctor setAddDocotr={setAddDocotr} />}
-      {addPatient && (
-        <AddPatient
-          setAddPatient={setAddPatient}
-          registerDoctors={registerDoctors}
-        />
-      )}
-      {loader && <Loader />}
+          <div className="content-body">
+            {openComponent === "Home" ? (
+              <Home
+                setPatientDetails={setPatientDetails}
+                setOpenComponent={setOpenComponent}
+                registerDoctors={registerDoctors}
+                registeredPatient={registeredPatient}
+                notifications={notifications}
+                setDoctorDetails={setDoctorDetails}
+                allAppointments={allAppointments}
+                accountBalance={accountBalance}
+                currency={currency}
+              />
+            ) : openComponent === "Patient" ? (
+              <Patient
+                setPatientDetails={setPatientDetails}
+                setOpenComponent={setOpenComponent}
+              />
+            ) : openComponent === "Doctor" ? (
+              <Doctor
+                setOpenComponent={setOpenComponent}
+                setDoctorDetails={setDoctorDetails}
+              />
+            ) : openComponent === "Add Medicine" ? (
+              <AddMedicine
+                setOpenComponent={setOpenComponent}
+                setMedicineDetails={setMedicineDetails}
+                registerDoctors={registerDoctors}
+              />
+            ) : openComponent === "All Appoinments" ? (
+              <AllAppoinments
+                setDoctorDetails={setDoctorDetails}
+                setOpenComponent={setOpenComponent}
+                setPatientDetails={setPatientDetails}
+              />
+            ) : openComponent === "Appointment" ? (
+              <Appointment
+                setOpenComponent={setOpenComponent}
+                setDoctorDetails={setDoctorDetails}
+              />
+            ) : openComponent === "Shop" ? (
+              <Shop
+                setOpenComponent={setOpenComponent}
+                setMedicineDetails={setMedicineDetails}
+                currency={currency}
+              />
+            ) : openComponent === "Medicine" ? (
+              <Medicine
+                setOpenComponent={setOpenComponent}
+                setMedicineDetails={setMedicineDetails}
+                medicineDetails={medicineDetails}
+                BUY_MEDICINE={BUY_MEDICINE}
+                userType={userType}
+                currency={currency}
+              />
+            ) : openComponent === "Order" ? (
+              <Order
+                setOpenComponent={setOpenComponent}
+                setMedicineDetails={setMedicineDetails}
+                setInvoic={setInvoic}
+                currency={currency}
+              />
+            ) : openComponent === "Invoice" ? (
+              <Invoice
+                setOpenComponent={setOpenComponent}
+                invoic={invoic}
+                currency={currency}
+              />
+            ) : openComponent === "Notifications" ? (
+              <Notifications
+                notifications={notifications}
+                setOpenComponent={setOpenComponent}
+              />
+            ) : openComponent === "Profile" ? (
+              <Profile
+                user={user}
+                setOpenComponent={setOpenComponent}
+                setDoctorDetails={setDoctorDetails}
+              />
+            ) : openComponent === "PatientProfile" ? (
+              <PatientProfile
+                patientDetails={patientDetails}
+                setOpenComponent={setOpenComponent}
+                setDoctorDetails={setDoctorDetails}
+              />
+            ) : openComponent === "DoctorProfile" ? (
+              <DoctorProfile
+                setPatientDetails={setPatientDetails}
+                setOpenComponent={setOpenComponent}
+                user={user}
+              />
+            ) : openComponent === "DoctorDetails" ? (
+              <DoctorDetails
+                setPatientDetails={setPatientDetails}
+                setOpenComponent={setOpenComponent}
+                doctorDetails={doctorDetails}
+              />
+            ) : openComponent === "StaffProfile" ? (
+              <StaffProfile setOpenComponent={setOpenComponent} />
+            ) : openComponent === "Chat" ? (
+              <Chat
+                setOpenComponent={setOpenComponent}
+                SEND_MESSAGE={SEND_MESSAGE}
+              />
+            ) : openComponent === "Ask AI" ? (
+              <AI setOpenComponent={setOpenComponent} />
+            ) : openComponent === "MedicialHistory" ? (
+              <MedicialHistory setOpenComponent={setOpenComponent} />
+            ) : openComponent === "User" ? (
+              <User setOpenComponent={setOpenComponent} />
+            ) : openComponent === "UpdateAdmin" ? (
+              <UpdateAdmin setOpenComponent={setOpenComponent} />
+            ) : openComponent === "YourAppointments" ? (
+              <DoctorAppointment
+                setOpenComponent={setOpenComponent}
+                setPatientDetails={setPatientDetails}
+              />
+            ) : openComponent === "Prescription" ? (
+              <Prescription
+                setOpenComponent={setOpenComponent}
+                setDoctorDetails={setDoctorDetails}
+                setPatientDetails={setPatientDetails}
+                setMedicineDetails={setMedicineDetails}
+              />
+            ) : (
+              ""
+            )}
+          </div>
+        </div>
+        {authComponent && (
+          <Auth
+            setAddDocotr={setAddDocotr}
+            setAddPatient={setAddPatient}
+            address={address}
+            connectMetaMask={connectMetaMask}
+            SHORTEN_ADDRESS={SHORTEN_ADDRESS}
+          />
+        )}
+
+        {addDocotr && <AddDoctor setAddDocotr={setAddDocotr} />}
+        {addPatient && (
+          <AddPatient
+            setAddPatient={setAddPatient}
+            registerDoctors={registerDoctors}
+          />
+        )}
+        {loader && <Loader />}
+      </div>
     </>
   );
 };
