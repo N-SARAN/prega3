@@ -32347,21 +32347,21 @@ pre code.hljs {
   padding: 10px 50px 0;
 }
 
-.profile-intpregAthIt .row {
+.profile-interest .row {
   margin: 0 -0.7px;
 }
 
-.profile-intpregAthIt .row .int-col {
+.profile-interest .row .int-col {
   padding: 0 0.7px;
 }
 
-.profile-intpregAthIt .row .int-col .intpregAthIt-cat {
+.profile-interest .row .int-col .interest-cat {
   margin-bottom: 1.4px;
   position: relative;
   display: block;
 }
 
-.profile-intpregAthIt .row .int-col .intpregAthIt-cat:after {
+.profile-interest .row .int-col .interest-cat:after {
   background: #000;
   bottom: 0;
   content: "";
@@ -32373,7 +32373,7 @@ pre code.hljs {
   z-index: 0;
 }
 
-.profile-intpregAthIt .row .int-col .intpregAthIt-cat p {
+.profile-interest .row .int-col .interest-cat p {
   position: absolute;
   top: 0;
   width: 100%;
@@ -37593,15 +37593,15 @@ fieldset:disabled .btn {
   border-color: #992180;
 }
 
-.btn-pintpregAthIt {
+.btn-pinterest {
   background: #bd081c;
   border-color: #bd081c;
   color: #fff;
 }
 
-.btn-pintpregAthIt:active,
-.btn-pintpregAthIt:focus,
-.btn-pintpregAthIt:hover {
+.btn-pinterest:active,
+.btn-pinterest:focus,
+.btn-pinterest:hover {
   background: #8c0615;
   color: #fff;
   border-color: #8c0615;

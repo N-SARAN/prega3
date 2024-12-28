@@ -19,9 +19,9 @@ module.exports = {
     hardhat: {
       chainId: 31337,
     },
-    // holesky: {
-    //   url: NEXT_PUBLIC_RPC_URL,
-    //   accounts: [`0x${NEXT_PUBLIC_PRIVATE_KEY}`],
-    // },
+    holesky: {
+      url: NEXT_PUBLIC_RPC_URL,
+      accounts: [`0x${NEXT_PUBLIC_PRIVATE_KEY}`],
+    },
   },
 };

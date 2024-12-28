@@ -3878,15 +3878,15 @@
   content: "\f484";
 }
 
-.la-pintpregAthIt:before {
+.la-pinterest:before {
   content: "\f0d2";
 }
 
-.la-pintpregAthIt-p:before {
+.la-pinterest-p:before {
   content: "\f231";
 }
 
-.la-pintpregAthIt-square:before {
+.la-pinterest-square:before {
   content: "\f0d3";
 }
 
@@ -6324,12 +6324,12 @@
   content: "\f0c9";
 }
 
-.la.la-pintpregAthIt {
+.la.la-pinterest {
   font-family: "Line Awesome Brands";
   font-weight: 400;
 }
 
-.la.la-pintpregAthIt-square {
+.la.la-pinterest-square {
   font-family: "Line Awesome Brands";
   font-weight: 400;
 }
@@ -7793,7 +7793,7 @@
   content: "\f09a";
 }
 
-.la.la-pintpregAthIt-p {
+.la.la-pinterest-p {
   font-family: "Line Awesome Brands";
   font-weight: 400;
 }

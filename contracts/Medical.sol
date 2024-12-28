@@ -2,6 +2,7 @@
 pragma solidity ^0.8.0;
 
 contract Healthcare {
+
     struct Medicine {
         uint id;
         string IPFS_URL;
@@ -206,7 +207,7 @@ contract Healthcare {
         emit MEDICINE_PRICE(_medicineId, _price);
     }
 
-    //UPDATE MEDICATION QUANTITY
+    //UPDATE MEDICATION QUENTITY
     function UPDATE_MEDICINE_QUANTITY(uint _medicineId, uint _quantity) public onlyAdmin {
         require(_medicineId <= medicineCount, "Medicine does not exist");
         medicines[_medicineId].quantity = _quantity;
@@ -402,6 +403,8 @@ contract Healthcare {
     }
 
     //--------------END OF PATIENT------------------
+
+
 
      //--------------ADMIN------------------
 
@@ -676,7 +679,8 @@ contract Healthcare {
         return userList[pubkey];
     }
 
-     function ADD_FRIEND(address friend_key, string calldata name, address _myAddress) internal {
+
+    function ADD_FRIEND(address friend_key, string calldata name, address _myAddress) internal {
         
         require(CHECK_USER_EXISTS(_myAddress), "Create an account first");
         require(CHECK_USER_EXISTS(friend_key), "User is not registered!");

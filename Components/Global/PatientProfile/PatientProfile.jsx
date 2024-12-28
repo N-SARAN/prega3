@@ -145,7 +145,7 @@ const Profile = ({ patientDetails, setOpenComponent, setDoctorDetails }) => {
         <div className="col-xl-3 col-xxl-4 col-md-6">
           <div className="card">
             <div className="card-header border-0 pb-0">
-              <h4 className="fs-20 font-w600">Medical History</h4>
+              <h4 className="fs-20 font-w600">Midicial History</h4>
             </div>
             <div className="card-body">
               <div className="widget-timeline-icon2">

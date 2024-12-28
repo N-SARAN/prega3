@@ -761,17 +761,17 @@ fieldset:disabled .btn{
     }
 }
 
-.btn-pintpregAthIt {
-    background  : $pintpregAthIt;
-    border-color: $pintpregAthIt;
+.btn-pinterest {
+    background  : $pinterest;
+    border-color: $pinterest;
     color       : $white;
 
     &:active,
     &:focus,
     &:hover {
-        background  : darken($pintpregAthIt, 10%);
+        background  : darken($pinterest, 10%);
         color       : $white;
-        border-color: darken($pintpregAthIt, 10%);
+        border-color: darken($pinterest, 10%);
     }
 }
 

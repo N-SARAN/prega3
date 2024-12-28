@@ -61,7 +61,7 @@ const UpdateAdmin = ({}) => {
       review: 2,
       quentity: 5,
       code: "0405689",
-      brand: "@CryptoVenture Innovators",
+      brand: "@theblockchaincoders",
       disease: ["Fever", "Headache", "Energy"],
       description:
         "The Blockchain Coders brings together organizations from across web3 to create the largest community learning blockchain education. ‍",
@@ -74,7 +74,7 @@ const UpdateAdmin = ({}) => {
       review: 2,
       quentity: 5,
       code: "0405689",
-      brand: "@CryptoVenture Innovators",
+      brand: "@theblockchaincoders",
       disease: ["Fever", "Headache", "Energy"],
       description:
         "The Blockchain Coders brings together organizations from across web3 to create the largest community learning blockchain education. ‍",
@@ -87,7 +87,7 @@ const UpdateAdmin = ({}) => {
       review: 2,
       quentity: 5,
       code: "0405689",
-      brand: "@CryptoVenture Innovators",
+      brand: "@theblockchaincoders",
       disease: ["Fever", "Headache", "Energy"],
       description:
         "The Blockchain Coders brings together organizations from across web3 to create the largest community learning blockchain education. ‍",
@@ -100,7 +100,7 @@ const UpdateAdmin = ({}) => {
       review: 2,
       quentity: 5,
       code: "0405689",
-      brand: "@CryptoVenture Innovators",
+      brand: "@theblockchaincoders",
       disease: ["Fever", "Headache", "Energy"],
       description:
         "The Blockchain Coders brings together organizations from across web3 to create the largest community learning blockchain education. ‍",
@@ -113,7 +113,7 @@ const UpdateAdmin = ({}) => {
       review: 2,
       quentity: 5,
       code: "0405689",
-      brand: "@CryptoVenture Innovators",
+      brand: "@theblockchaincoders",
       disease: ["Fever", "Headache", "Energy"],
       description:
         "The Blockchain Coders brings together organizations from across web3 to create the largest community learning blockchain education. ‍",
@@ -126,7 +126,7 @@ const UpdateAdmin = ({}) => {
       review: 2,
       quentity: 5,
       code: "0405689",
-      brand: "@CryptoVenture Innovators",
+      brand: "@theblockchaincoders",
       disease: ["Fever", "Headache", "Energy"],
       description:
         "The Blockchain Coders brings together organizations from across web3 to create the largest community learning blockchain education. ‍",
