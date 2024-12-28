@@ -60,7 +60,7 @@ const Auth = ({
                         <p className="mb-0">
                           Welcome to{" "}
                           <a className="text-primary">
-                            ERES: Your Health, Our Priority
+                            PREGA3: Motherhood, Monitored. Miracles Managed.
                           </a>{" "}
                           where compassionate care meets exceptional medical
                           expertise. <FaArrowRightLong />

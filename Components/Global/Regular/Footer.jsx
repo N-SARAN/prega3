@@ -6,8 +6,8 @@ const Footer = () => {
       <div className="copyright">
         <p>
           Copyright © Designed &amp; Developed by
-          <a href="https://www.theblockchaincoders.com/" target="_blank">
-            @theblockchaincoders
+          <a href="https://www.CryptoVentureInnovators.com/" target="_blank">
+            @CryptoVentureInnovators
           </a>
           2023
         </p>

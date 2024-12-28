@@ -61,10 +61,10 @@ const UpdateAdmin = ({}) => {
       review: 2,
       quentity: 5,
       code: "0405689",
-      brand: "@theblockchaincoders",
+      brand: "@CryptoVentureInnovators",
       disease: ["Fever", "Headache", "Energy"],
       description:
-        "The Blockchain Coders brings together organizations from across web3 to create the largest community learning blockchain education. ‍",
+        "CryptoVenture Innovators brings together organizations from across web3 to create the largest community learning blockchain education. ‍",
     },
     {
       name: "RadiantGlow Serum",
@@ -74,10 +74,10 @@ const UpdateAdmin = ({}) => {
       review: 2,
       quentity: 5,
       code: "0405689",
-      brand: "@theblockchaincoders",
+      brand: "@CryptoVentureInnovators",
       disease: ["Fever", "Headache", "Energy"],
       description:
-        "The Blockchain Coders brings together organizations from across web3 to create the largest community learning blockchain education. ‍",
+        "CryptoVenture Innovators brings together organizations from across web3 to create the largest community learning blockchain education. ‍",
     },
     {
       name: "RadiantGlow Serum",
@@ -87,10 +87,10 @@ const UpdateAdmin = ({}) => {
       review: 2,
       quentity: 5,
       code: "0405689",
-      brand: "@theblockchaincoders",
+      brand: "@CryptoVentureInnovators",
       disease: ["Fever", "Headache", "Energy"],
       description:
-        "The Blockchain Coders brings together organizations from across web3 to create the largest community learning blockchain education. ‍",
+        "CryptoVenture Innovators brings together organizations from across web3 to create the largest community learning blockchain education. ‍",
     },
     {
       name: "RadiantGlow Serum",
@@ -100,10 +100,10 @@ const UpdateAdmin = ({}) => {
       review: 2,
       quentity: 5,
       code: "0405689",
-      brand: "@theblockchaincoders",
+      brand: "@CryptoVentureInnovators",
       disease: ["Fever", "Headache", "Energy"],
       description:
-        "The Blockchain Coders brings together organizations from across web3 to create the largest community learning blockchain education. ‍",
+        "CryptoVenture Innovators brings together organizations from across web3 to create the largest community learning blockchain education. ‍",
     },
     {
       name: "RadiantGlow Serum",
@@ -113,10 +113,10 @@ const UpdateAdmin = ({}) => {
       review: 2,
       quentity: 5,
       code: "0405689",
-      brand: "@theblockchaincoders",
+      brand: "@CryptoVentureInnovators",
       disease: ["Fever", "Headache", "Energy"],
       description:
-        "The Blockchain Coders brings together organizations from across web3 to create the largest community learning blockchain education. ‍",
+        "CryptoVenture Innovators brings together organizations from across web3 to create the largest community learning blockchain education. ‍",
     },
     {
       name: "RadiantGlow Serum",
@@ -126,10 +126,10 @@ const UpdateAdmin = ({}) => {
       review: 2,
       quentity: 5,
       code: "0405689",
-      brand: "@theblockchaincoders",
+      brand: "@CryptoVentureInnovators",
       disease: ["Fever", "Headache", "Energy"],
       description:
-        "The Blockchain Coders brings together organizations from across web3 to create the largest community learning blockchain education. ‍",
+        "CryptoVenture Innovators brings together organizations from across web3 to create the largest community learning blockchain education. ‍",
     },
   ];
 
