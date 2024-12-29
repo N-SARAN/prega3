@@ -117,7 +117,7 @@ export default function AadhaarVerification({ onVerified }) {
               prega3
             </Typography>
             <Typography variant="h5" sx={{ color: "secondary.main", mb: 5 }}>
-              Motherhood Monitored, Miracles Managed
+              Your Gateway to Smart Real Estate Deals
             </Typography>
             <Typography variant="h6" color="textSecondary">
               Please connect your MetaMask wallet and verify your Aadhaar

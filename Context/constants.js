@@ -28,8 +28,8 @@ const networks = {
     chainId: `0x${Number(137).toString(16)}`,
     chainName: "Polygon Mainnet",
     nativeCurrency: {
-      name: "MATIC",
-      symbol: "MATIC",
+      name: "POL",
+      symbol: "POL",
       decimals: 18,
     },
     rpcUrls: ["https://rpc.ankr.com/polygon"],

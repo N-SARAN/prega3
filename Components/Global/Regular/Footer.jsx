@@ -9,7 +9,7 @@ const Footer = () => {
           <a href="https://www.CryptoVentureInnovators.com/" target="_blank">
             @CryptoVentureInnovators
           </a>
-          2023
+          2024
         </p>
       </div>
     </div>
