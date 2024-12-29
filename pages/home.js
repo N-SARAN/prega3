@@ -195,41 +195,60 @@ const HomePage = () => {
           address={address}
         />
         <div className="content-body">
-        {status === "authenticated" ? (
-  <div style={{ textAlign: "center", marginTop: "20px" }}>
-    <h2>Welcome, {session.user.name}!</h2>
-    <button
-      onClick={() => signOut()}
-      style={{
-        padding: "10px 20px",
-        marginTop: "20px",
-        cursor: "pointer",
-        border: "none",
-        backgroundColor: "#007bff",
-        color: "#fff",
-        borderRadius: "5px",
-        display: "inline-block",
-      }}
-    >
-      Log Out
-    </button>
-  </div>
-) : (
-  <div style={{ textAlign: "center", marginBottom: "-100px" ,marginLeft:"1000px "}}>
-    <a
-      href="/login"
-      style={{
-        color: "blue",
-        fontSize: "18px",
-        textDecoration: "none",
-        display: "inline-block",
-        margin: "0 auto", // Centers horizontally
-      }}
-    >
-      Login Here
-    </a>
-  </div>
-)}
+          {status === "authenticated" ? (
+            <div style={{ textAlign: "center", marginTop: "20px" }}>
+              <h2>Welcome, {session.user.name}!</h2>
+              <button
+                onClick={() => signOut()}
+                style={{
+                  padding: "10px 20px",
+                  marginTop: "-100px",
+                  cursor: "pointer",
+                  border: "none",
+                  backgroundColor: "var(--primary)",
+                  color: "#fff",
+                  borderRadius: "5px",
+                  marginLeft: "1200px",
+                  display: "inline-block",
+                  marginTop: "-100000px",
+                }}
+              >
+                Log Out
+              </button>
+            </div>
+          ) : (
+            <>
+              <h2 style={{ color: "var(--primary-light)" }}>j</h2>
+              <div
+                style={{
+                  padding: "10px 20px",
+                  marginTop: "-100px",
+                  cursor: "pointer",
+                  border: "none",
+                  backgroundColor: "var(--primary)",
+                  color: "#fff",
+                  borderRadius: "5px",
+                  marginLeft: "1200px",
+                  display: "inline-block",
+                  marginTop: "-100000px",
+                }}
+              >
+                <a
+                  href="/login"
+                  style={{
+                    marginTop: "15px",
+                    color: "#fff",
+                    fontSize: "18px",
+                    textDecoration: "none",
+                    display: "inline-block",
+                    margin: "1px auto 0", // Centers horizontally
+                  }}
+                >
+                  Login
+                </a>
+              </div>
+            </>
+          )}
 
           <div className="content-body">
             {openComponent === "Home" ? (
