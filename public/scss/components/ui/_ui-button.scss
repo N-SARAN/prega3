@@ -761,17 +761,17 @@ fieldset:disabled .btn{
     }
 }
 
-.btn-pintpregAthIt {
-    background  : $pintpregAthIt;
-    border-color: $pintpregAthIt;
+.btn-pintPolyMedt {
+    background  : $pintPolyMedt;
+    border-color: $pintPolyMedt;
     color       : $white;
 
     &:active,
     &:focus,
     &:hover {
-        background  : darken($pintpregAthIt, 10%);
+        background  : darken($pintPolyMedt, 10%);
         color       : $white;
-        border-color: darken($pintpregAthIt, 10%);
+        border-color: darken($pintPolyMedt, 10%);
     }
 }
 

@@ -1,21 +1,21 @@
-# 🩺 *MediVault* - Redefining Healthcare, One Block at a Time
+# 🩺 *PolyMed* - Redefining Healthcare, One Block at a Time
 
-[![Deployment Status](https://img.shields.io/badge/Deployment-Live-brightgreen)](https://medivault-mainnet.vercel.app/)
-[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/ahkharsha/MediVault)
+[![Deployment Status](https://img.shields.io/badge/Deployment-Live-brightgreen)](https://PolyMed-mainnet.vercel.app/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/ahkharsha/PolyMed)
 [![LinkedIn](https://img.shields.io/badge/Connect-LinkedIn-blue)](https://www.linkedin.com/in/harsha-kumar-a-271a76203/)
 
 <img src="https://github.com/user-attachments/assets/5e20a3bc-192b-49aa-86ef-72bac17195b4" alt="logo-white" width="50"/>
 
 ---
 
-**MediVault** is a blockchain-powered platform designed to revolutionize doctor-patient interactions, enable secure health records management, and redefine the healthcare experience. By integrating cutting-edge technologies, *MediVault* ensures transparency, security, and privacy in every interaction.
+**PolyMed** is a blockchain-powered platform designed to revolutionize doctor-patient interactions, enable secure health records management, and redefine the healthcare experience. By integrating cutting-edge technologies, *PolyMed* ensures transparency, security, and privacy in every interaction.
 
 ---
 
 ## 🚀 **Deployment**
 
 The platform is live and accessible at:  
-<br>*🔗 [MediVault - medivault-mainnet.vercel.app](https://medivault-mainnet.vercel.app/)*<br><br>
+<br>*🔗 [PolyMed - PolyMed-mainnet.vercel.app](https://PolyMed-mainnet.vercel.app/)*<br><br>
 
 ---
 
@@ -56,7 +56,7 @@ Visit the link below to view it on the explorer!
 
 ## 🎯 **Project Vision**
 
-Our vision is to revolutionize healthcare by leveraging blockchain technology to enhance trust, transparency, and efficiency in patient-doctor interactions. *MediVault* empowers users with secure health records and a seamless experience.
+Our vision is to revolutionize healthcare by leveraging blockchain technology to enhance trust, transparency, and efficiency in patient-doctor interactions. *PolyMed* empowers users with secure health records and a seamless experience.
 
 ---
 
@@ -149,7 +149,7 @@ Your application will be up and running at `http://localhost:3000` 🚀
 
 ## 📜 **License**
 
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/yourusername/MediVault/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/yourusername/PolyMed/blob/main/LICENSE) file for details.
 
 ---
 
@@ -159,7 +159,7 @@ For any inquiries or support, feel free to reach out:
 
 - **Email**: [ahkharsha@gmail.com](mailto:ahkharsha@gmail.com)
 - **LinkedIn**: [A Harsha Kumar](https://www.linkedin.com/in/harsha-kumar-a-271a76203/)
-- **Project Website**: [MediVault](https://medivault-mainnet.vercel.app/)
+- **Project Website**: [PolyMed](https://PolyMed-mainnet.vercel.app/)
 
 ---
 
