@@ -117,7 +117,7 @@ export default function AadhaarVerification({ onVerified }) {
               PolyMed
             </Typography>
             <Typography variant="h5" sx={{ color: "secondary.main", mb: 5 }}>
-              Your Gateway to Smart Real Estate Deals
+            Revolutionizing Healthcare, One Block at a Time
             </Typography>
             <Typography variant="h6" color="textSecondary">
               Please connect your MetaMask wallet and verify your Aadhaar
